@@ -48,7 +48,7 @@ int main( int argc , char **argv ) {
         //fingerprint + time
           tabChebi[i] = mol;
           t1 = clock();
-          tabChebiFingerprint[i] = RDKFingerprintMol(*tabChebi[i]);
+          tabChebiFingerprint[i] = RDKFingerprintMol(*tabChebi[i]);//daylight fingerprint
           t2 = clock();
           temps = (float)(t2-t1)/CLOCKS_PER_SEC;
           monFlux << mol->getProp<std::string>( "_Name" ) << " "<< temps << endl;
